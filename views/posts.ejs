@@ -1,3 +1,109 @@
 <%- include('header') %>
-这是主页
+  <div class="row" style="margin-left: 20px;margin-right: 20px;margin-bottom: 30px">
+      <div class="col-sm-6">
+          <h1>设计中心项目排期表</h1>
+      </div>
+
+      <div class="col-sm-6" style="text-align: right">
+          <button type="button" class="btn btn-w-m btn-primary" style="margin-top: 30px">添加项目</button>
+      </div>
+  </div>
+
+  <table class="table table-bordered">
+      <thead>
+      <tr>
+          <th>项目名称</th>
+          <th>优先级</th>
+          <th>需求人</th>
+          <th>交互</th>
+          <th>视觉</th>
+          <th>重构</th>
+          <th>时间</th>
+          <th>状态</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <td>app改版</td>
+          <td>p1</td>
+          <td>张小冰</td>
+          <td>aster</td>
+          <td>gaby</td>
+          <td>alisa</td>
+
+          <td>
+           <span class="time-line time-jh">9－01至9－10</span>
+           <span class="time-line time-sj">9－10至9－19</span>
+           <span class="time-line time-cg">9－20至9－24</span>
+
+          </td>
+          <td class="blue">进行中</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>p1</td>
+          <td>张三</td>
+          <td>aster</td>
+          <td>gaby</td>
+          <td>alisa</td>
+
+          <td>
+              <span class="time-line time-jh bg-gray">9－01至9－10</span>
+              <span class="time-line time-sj">9－10至9－19</span>
+              <span class="time-line time-cg">9－20至9－24</span>
+
+          </td>
+          <td class="blue">进行中</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>p1</td>
+          <td>张三</td>
+          <td>aster</td>
+          <td>gaby</td>
+          <td>alisa</td>
+
+          <td>
+              <span class="time-line time-jh bg-red">9－01至9－10</span>
+              <span class="time-line time-sj">9－10至9－19</span>
+              <span class="time-line time-cg">9－20至9－24</span>
+
+          </td>
+          <td class="blue">进行中</td>
+      </tr>
+      <tr class="time-stop">
+          <td>1</td>
+          <td>p1</td>
+          <td>张三</td>
+          <td>aster</td>
+          <td>gaby</td>
+          <td>alisa</td>
+
+          <td>
+              <span class="time-line time-jh">9－01至9－10</span>
+              <span class="time-line time-sj">9－10至9－19</span>
+              <span class="time-line time-cg">9－20至9－24</span>
+
+          </td>
+          <td class="red">已停止</td>
+      </tr>
+      <tr  class="time-done">
+          <td>1</td>
+          <td>p1</td>
+          <td>张三</td>
+          <td>aster</td>
+          <td>gaby</td>
+          <td>alisa</td>
+
+          <td>
+              <span class="time-line time-jh">9－01至9－10</span>
+              <span class="time-line time-sj">9－10至9－19</span>
+              <span class="time-line time-cg">9－20至9－24</span>
+
+          </td>
+          <td>已完成</td>
+      </tr>
+
+      </tbody>
+  </table>
 <%- include('footer') %>

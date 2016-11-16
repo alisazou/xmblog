@@ -1,5 +1,3 @@
-
-
 var path = require('path');
 var sha1 = require('sha1');
 var express = require('express');
@@ -16,7 +14,7 @@ router.get('/', checkNotLogin, function(req, res, next) {
 // POST /signup 用户注册
 router.post('/', checkNotLogin, function(req, res, next) {
   var name = req.fields.name;
-  //var avatar = req.files.avatar.path.split(path.sep).pop();
+  var avatar = req.files.avatar.path.split(path.sep).pop();
   var password = req.fields.password;
   var repassword = req.fields.repassword;
 
@@ -25,12 +23,11 @@ router.post('/', checkNotLogin, function(req, res, next) {
     if (!(name.length >= 1 && name.length <= 10)) {
       throw new Error('名字请限制在 1-10 个字符');
     }
-    
-    
-    // if (!req.files.avatar.name) {
-    //   throw new Error('缺少头像');
-    // }
-    if (password < 6) {
+   
+    if (!req.files.avatar.name) {
+      throw new Error('缺少头像');
+    }
+    if (password.length < 6) {
       throw new Error('密码至少 6 个字符');
     }
     if (password !== repassword) {
@@ -47,8 +44,8 @@ router.post('/', checkNotLogin, function(req, res, next) {
   // 待写入数据库的用户信息
   var user = {
     name: name,
-    password: password
-    // avatar: avatar
+    password: password,
+    avatar: avatar
   };
   // 用户信息写入数据库
   UserModel.create(user)

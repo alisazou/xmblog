@@ -7,14 +7,7 @@ body {
   padding-top: 40px;
 }
 
-a:hover {
-  border-bottom: 3px solid #4fc08d;
-}
 
-.button {
-  background-color: #4fc08d !important;
-  color: #fff !important;
-}
 
 .avatar {
   border-radius: 3px;
@@ -86,3 +79,13 @@ a:hover {
     margin: 0 auto;
     padding-top: 40px;
 }
+
+.time-jh{background-color:  #09F;}
+.time-sj{background-color:  #F93;}
+.time-cg{background-color:  #0C0;}
+.time-line {margin-left: 10px;color: #fff;padding: 2px 10px}
+.time-done{color: #e6e6e6}
+.blue{color: #1c84c6}
+.red{color: #ed5565}
+.bg-gray{background-color: #999}
+.bg-red{background-color: #ed5565}
