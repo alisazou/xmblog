@@ -10,13 +10,13 @@ router.get('/', function(req, res, next) {
 });
 
 // POST /posts 发表一篇文章
-router.post('/', checkLogin, function(req, res, next) {
-  res.send(req.flash());
+router.get('/create', checkLogin, function(req, res, next) {
+ res.render('create');
 });
 
 // GET /posts/create 发表文章页
-router.get('/create', checkLogin, function(req, res, next) {
-  res.send(req.flash());
+router.post('/', checkLogin, function(req, res, next) {
+  res.render('create');
 });
 
 // GET /posts/:postId 单独一篇的文章页

@@ -1,32 +1,28 @@
 /* ---------- 全局样式 ---------- */
+.mt20{margin-top: 20px}
+.mt100{margin-top: 100px}
+.blue{color: #1c84c6 !important}
+.red{color: #ed5565 !important}
+.bg-gray{background-color: #e6e6e6 !important}
+.bg-red{background-color: #ed5565 !important}
 
-body {
-  width: 1100px;
-  height: 100%;
-  margin: 0 auto;
-  padding-top: 40px;
-}
-
-
-
-.avatar {
-  border-radius: 3px;
-  width: 48px;
-  height: 48px;
-  float: right;
-}
 
 /* ---------- nav ---------- */
 
 .nav {
-  margin-bottom: 20px;
-  color: #999;
-  text-align: center;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 70px;
+  line-height: 50px;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: #fff;
 }
-
+.nav  a{display: block;margin-left: 20px}
+.nav  a:hover{text-decoration: none;}
 .nav h1 {
   color: #4fc08d;
-  display: inline-block;
   margin: 10px 0;
 }
 
@@ -35,40 +31,11 @@ body {
 .nav-setting {
   position: fixed;
   right: 30px;
-  top: 35px;
+  top: 20px;
   z-index: 999;
 }
+.nav-setting .item{width: 70px;display: inline-block;}
 
-.nav-setting .ui.dropdown.button {
-  padding: 10px 10px 0 10px;
-  background-color: #fff !important;
-}
-
-.nav-setting .icon.bars {
-  color: #000;
-  font-size: 18px;
-}
-
-/* ---------- post-content ---------- */
-
-.post-content h3 a {
-  color: #4fc08d !important;
-}
-
-.post-content .tag {
-  font-size: 13px;
-  margin-right: 5px;
-  color: #999;
-}
-
-.post-content .tag.right {
-  float: right;
-  margin-right: 0;
-}
-
-.post-content .tag.right a {
-  color: #999;
-}
 /*login */
 .loginscreen.middle-box {
     width: 300px;
@@ -79,13 +46,14 @@ body {
     margin: 0 auto;
     padding-top: 40px;
 }
+.addpages{margin: 50px;background-color: #e6e6e6;padding: 30px}
 
 .time-jh{background-color:  #09F;}
 .time-sj{background-color:  #F93;}
 .time-cg{background-color:  #0C0;}
 .time-line {margin-left: 10px;color: #fff;padding: 2px 10px}
 .time-done{color: #e6e6e6}
-.blue{color: #1c84c6}
-.red{color: #ed5565}
-.bg-gray{background-color: #999}
-.bg-red{background-color: #ed5565}
+.time-done .time-line{background-color: #e6e6e6}
+
+.index-table tr:hover{cursor:pointer;}
+.time-stop .time-line{background-color:#ed5565 }
