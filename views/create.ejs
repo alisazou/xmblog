@@ -1,60 +1,38 @@
 <%- include('header2') %>
 
-  <div class="row mt20" >
+  <div class="row mt20 " >
   
     <div class="col-xs-12">     
       <form role="form" class="form-horizontal" name="myForm"  method="post">
-        <div class="form-group">
+        <div class="form-group addpages">
           <label class="control-label col-sm-1">工作名称 (*)</label>
             <div class="col-sm-5">
-                <input type="text" class="form-control input-sm" name="title"  required   ng-model="yourname"/>
-               <p> Hello {{yourname || 'alida'}}!</p>
-               <p>1 + 2 = {{ 1 + 2 }}</p>
-
+                <input type="text" class="form-control input-sm" name="title"  required  ng-model="user.firstName"/>
+               <p>form = {{user}}</p>
               </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group addpages">
             <label class="control-label col-sm-1">需求人(*)</label>
-            <div class="radio col-sm-4 ">
-               <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-    需求人
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-  </ul>
-</div>
+            <div class="col-sm-4 ">
+              <div ng-app="myApp" ng-controller="SelectProject">
+                <select ng-model="selectedName" ng-options="x for x in names">
+                </select>
+              </div>
             </div>
+     
         </div>
 
-        <div class="form-group mt20 addpages" >
+        <div class="form-group  addpages" >
             <label class="control-label col-sm-1">交互</label>
             <div class="col-sm-1" id="config">
-                <div class="dropdown">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">需求人
-                  <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">Action</a>
-                    </li>
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">Another action</a>
-                    </li>
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">Something else here</a>
-                    </li>
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">Separated link</a>
-                    </li>
-                  </ul>
-                </div>
+              <div ng-app="myApp" ng-controller="SelectJiaohu">
+                <select ng-model="selectedName" ng-options="x for x in names">
+                </select>
+              </div>
+
             </div>
+           
              <label class="control-label col-sm-1">开始时间</label>
              <div class="control-label col-sm-2"><input type="text" class="form-control input-sm" name="title" ng-minlength="5" ng-maxlength="50"  required  id="article_title"></div>
               <label class="control-label col-sm-1">计划完成</label>
@@ -65,25 +43,12 @@
           <div class="form-group addpages" >
             <label class="control-label col-sm-1">视觉</label>
             <div class="col-sm-1" id="config">
-                <div class="dropdown">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">需求人
-                  <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">Action</a>
-                    </li>
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">Another action</a>
-                    </li>
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">Something else here</a>
-                    </li>
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">Separated link</a>
-                    </li>
-                  </ul>
-                </div>
+                <div ng-app="myApp" ng-controller="SelectShiJue">
+
+                <select ng-model="selectedName" ng-options="x for x in names">
+                </select>
+
+              </div>
             </div>
              <label class="control-label col-sm-1">开始时间</label>
              <div class="control-label col-sm-2"><input type="text" class="form-control input-sm" name="title" ng-minlength="5" ng-maxlength="50"  required  id="article_title"></div>
@@ -97,25 +62,12 @@
        <div class="col-sm-12">
           <label class="control-label col-sm-1">重构</label>
             <div class="col-sm-1" id="config">
-                <div class="dropdown">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">需求人
-                  <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">Action</a>
-                    </li>
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">Another action</a>
-                    </li>
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">Something else here</a>
-                    </li>
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">Separated link</a>
-                    </li>
-                  </ul>
-                </div>
+               <div ng-app="myApp" ng-controller="SelectUi">
+
+                <select ng-model="selectedName" ng-options="x for x in names">
+                </select>
+
+              </div>
             </div>
              <label class="control-label col-sm-1">开始时间</label>
              <div class="control-label col-sm-2"><input type="text" class="form-control input-sm" name="title" ng-minlength="5" ng-maxlength="50"  required  id="article_title"></div>
