@@ -1,0 +1,1 @@
+d:\mongodb\Server\bin\mongod.exe -dbpath d:\mongodb\xmblog

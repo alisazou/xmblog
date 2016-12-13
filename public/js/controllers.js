@@ -1,21 +1,16 @@
 
 
-
-function formCtrl($scope) {
-  $scope.names = ["Google", "Runoob", "Taobao"];
-}
-
 function SelectProject($scope) {
-  $scope.names = ["Google", "Runoob", "Taobao"];
+  $scope.names = ["张三", "李四", "王五"];
 }
 function SelectJiaohu($scope) {
-  $scope.names = ["Google", "Runoob", "Taobao"];
+  $scope.names = ["aster", "niko", "tang"];
 }
 function SelectShiJue($scope) {
-  $scope.names = ["Google", "Runoob", "Taobao"];
+  $scope.names = ["gaby", "zhiyi", "庐山"];
 }
 
 function SelectUi($scope) {
-  $scope.names = ["Google", "Runoob", "Taobao"];
+  $scope.names = ["alisa", "huzeng", "wenjun"];
 }
 
