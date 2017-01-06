@@ -33,6 +33,7 @@
     "mongolass": "^2.3.2",
     "objectid-to-timestamp": "^1.3.0",
     "sha1": "^1.1.1",
+    "vue-fullpage": "^1.0.8",
     "winston": "^2.3.0"
   },
   "devDependencies": {

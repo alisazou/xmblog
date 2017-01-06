@@ -6,28 +6,20 @@
       <form role="form" class="form-horizontal" name="myForm"  method="post">
         <div class="form-group addpages">
           <label class="control-label col-sm-1">工作名称 (*)</label>
-            <div class="col-sm-5">
-                <input type="text" class="form-control input-sm" name="title"  required  ng-model="user.firstName"/>
+            <div class="col-sm-5" >
+                <input type="text" class="form-control input-sm" name="title"    />
+               
              
               </div>
         </div>
 
- <div class="form-group">
-        <label for="dtp_input1" class="col-md-2 control-label">DateTime Picking</label>
-        <div  ng-model='timepickerTest'  ng-time class="input-group date form_datetime col-md-5" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
-            <input class="form-control" size="16" type="text" value="" readonly>
-            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-        </div>
-        <input type="hidden" id="dtp_input1" value="" /><br/>
-    </div>
+
         <div class="form-group addpages">
             <label class="control-label col-sm-1">需求人(*)</label>
             <div class="col-sm-4 ">
-              <div ng-app="myApp" ng-controller="SelectProject">
-                <select ng-model="selectedName" ng-options="x for x in names">
-                </select>
-              </div>
+                <div ng-controller="selectControllerPm">
+                  <select ng-model="mycity" ng-options="city.name as city.name group by city.group for city in Cities"></select>
+                </div>
             </div>
      
         </div>
@@ -35,15 +27,26 @@
         <div class="form-group  addpages" >
             <label class="control-label col-sm-1">交互</label>
             <div class="col-sm-1" id="config">
-              <div ng-app="myApp" ng-controller="SelectJiaohu">
-                <select ng-model="selectedName" ng-options="x for x in names">
-                </select>
-              </div>
+              <div ng-controller="selectControllerInteractive">
+                  <select ng-model="mycity" ng-options="city.name as city.name group by city.group for city in Cities"></select>
+                </div>
 
             </div>
            
              <label class="control-label col-sm-1">开始时间</label>
-             <div class="control-label col-sm-2"><input type="text" class="form-control input-sm" name="title" ng-minlength="5" ng-maxlength="50"  required  id="article_title"></div>
+               
+                <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+          <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+        <input type="hidden" id="dtp_input2" value="" /><br/>
+            </div>
+    
+             
+            </div>
+
+             </div>
               <label class="control-label col-sm-1">计划完成</label>
              <div class="control-label col-sm-2"><input type="text" class="form-control input-sm" name="title" ng-minlength="5" ng-maxlength="50"  required  id="article_title"></div>
               <label class="control-label col-sm-1">实际完成</label>
@@ -52,12 +55,9 @@
           <div class="form-group addpages" >
             <label class="control-label col-sm-1">视觉</label>
             <div class="col-sm-1" id="config">
-                <div ng-app="myApp" ng-controller="SelectShiJue">
-
-                <select ng-model="selectedName" ng-options="x for x in names">
-                </select>
-
-              </div>
+                   <div ng-controller="selectControllerDesign">
+                  <select ng-model="mycity" ng-options="city.name as city.name group by city.group for city in Cities"></select>
+                </div>
             </div>
              <label class="control-label col-sm-1">开始时间</label>
              <div class="control-label col-sm-2"><input type="text" class="form-control input-sm" name="title" ng-minlength="5" ng-maxlength="50"  required  id="article_title"></div>
@@ -71,12 +71,9 @@
        <div class="col-sm-12">
           <label class="control-label col-sm-1">重构</label>
             <div class="col-sm-1" id="config">
-               <div ng-app="myApp" ng-controller="SelectUi">
-
-                <select ng-model="selectedName" ng-options="x for x in names">
-                </select>
-
-              </div>
+                <div ng-controller="selectControllerUi">
+                  <select ng-model="mycity" ng-options="city.name as city.name group by city.group for city in Cities"></select>
+                </div>
             </div>
              <label class="control-label col-sm-1">开始时间</label>
              <div class="control-label col-sm-2"><input type="text" class="form-control input-sm" name="title" ng-minlength="5" ng-maxlength="50"  required  id="article_title"></div>
@@ -99,6 +96,25 @@
 
             
   </div>
+
+
+
+
+<script type="text/javascript">
+   
+  $('.form_date').datetimepicker({
+        language: 'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    minView: 2,
+    forceParse: 0
+    });
+ 
+</script>
+
 
 
 <%- include('footer') %>
